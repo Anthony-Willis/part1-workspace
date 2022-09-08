@@ -7,7 +7,7 @@ public class TelevisionValidationTest {
     tv.getVolume();
     tv.setBrand("hyundai");//error message
     tv.setBrand("Samsung");
-    tv.setBrand("invalid");
+    tv.setBrand("invalid name");
     System.out.println(tv);
 
   }
