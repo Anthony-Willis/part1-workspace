@@ -19,7 +19,13 @@ public class TelevisionClient {
 
     System.out.printf("%d Television instances created%n", Television.getInstanceCount());
 
-    Television tv3 = new Television("LG");
+    Television tv3 = new Television("Sony", 50);
+    tv3.setBrand("Samsung");
+    tv3.setVolume(55);
+    tv3.setDisplay(DisplayType.PLASMA);
+
+    tv3.turnOn();
+    tv3.turnOff();
 
     System.out.printf("%d Television instances created%n", Television.getInstanceCount());
 

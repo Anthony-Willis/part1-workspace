@@ -5,6 +5,7 @@ class Television {
   private static int instanceCount = 0;
   private String brand;
   private int volume;
+  private DisplayType display = DisplayType.LED;
 
 
   public Television() { //constructor. same name, no return type
@@ -20,6 +21,12 @@ class Television {
   public Television(String brand, int volume) {
     this(brand);
     setVolume(volume);
+
+  }
+
+  public Television(String brand, int volume, DisplayType display) {
+    this(brand, volume);
+    setDisplay(display);
 
   }
 
@@ -63,12 +70,20 @@ class Television {
     }
   }
 
+  public DisplayType getDisplay() {
+    return display;
+  }
+
+  public void setDisplay(DisplayType display) {
+    this.display = display;
+  }
+
   private boolean verifyInternetConnection() {
     return true;
   }
 
   public String toString() {
-    return "Television: brand " + brand + ", volume = " + volume;
+    return "Television: brand " + brand + ", volume = " + volume + ", display " + display;
   }
 
 
