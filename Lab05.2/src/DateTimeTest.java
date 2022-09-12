@@ -59,7 +59,7 @@ class DateTimeTest {
      */
     public static void testParse() {
         // TODO: create your birthday by parsing a text representation in standard format ("yyyy-MM-dd").
-        DateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyy");
+//        DateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyy");
 
         // OPTIONAL: now create it by parsing text in the form "2/6/2014" (this is Feb 6, not Jun 2).
     }
