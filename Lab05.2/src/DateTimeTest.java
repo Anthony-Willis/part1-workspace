@@ -12,8 +12,10 @@
  * For the purposes of this lab, we give you a few wildcarded imports,
  * so you can use the classes in these packages without having to worry about importing them.
  */
+import java.text.DateFormat;
 import java.time.*;
 import java.time.format.*;
+import java.util.Calendar;
 
 class DateTimeTest {
 
@@ -22,9 +24,9 @@ class DateTimeTest {
      * To run one test method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // testNow();
-        // testCreate();
-        // testParse();
+         testNow();
+         testCreate();
+         testParse();
         // testFormat();
     }
 
@@ -32,7 +34,10 @@ class DateTimeTest {
      * TASK: create current date, time, and date-time via now() and then print them.
      */
     public static void testNow() {
-        // TODO
+        LocalDateTime dt1 = LocalDateTime.now();
+        System.out.println(dt1);
+        LocalTime lt = LocalTime.now();
+
     }
 
     /**
@@ -40,9 +45,13 @@ class DateTimeTest {
      */
     public static void testCreate() {
         // TODO: create your birthday via of(). What day of the week were you born on?
-
+        LocalDate birthday = LocalDate.of(1997, 6, 4);
+        System.out.println(birthday);
         // TODO: use of() to create a value representing the 1st lunar landing - it happened on 7/20/69 at 3:18pm Eastern Time.
         // NOTE: ignore time-zone, just assume Eastern Time is the local time.
+        LocalDateTime lunar = LocalDateTime.of(1969, 07, 20, 15, 18,01);
+        System.out.println(lunar);
+
     }
 
     /**
@@ -50,6 +59,7 @@ class DateTimeTest {
      */
     public static void testParse() {
         // TODO: create your birthday by parsing a text representation in standard format ("yyyy-MM-dd").
+        DateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyy");
 
         // OPTIONAL: now create it by parsing text in the form "2/6/2014" (this is Feb 6, not Jun 2).
     }

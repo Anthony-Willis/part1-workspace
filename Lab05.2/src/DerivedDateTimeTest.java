@@ -50,6 +50,8 @@ class DerivedDateTimeTest {
      */
     public static void testPopularBirthdays() {
         // TODO: what is the average birthday of someone conceived on Valentine's Day?
+        LocalDate valentines = LocalDate.of(2022, Month.FEBRUARY, 14);
+
 
         // TODO: what is the average birthday of someone conceived on New Year's Eve (after midnight)?
     }
