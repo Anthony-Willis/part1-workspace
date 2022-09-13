@@ -23,15 +23,18 @@ public class Television {
 
     private static int instanceCount = 0;
 
+
     public static int getInstanceCount() {
         return instanceCount;
     }
 
     // PROPERTIES or ATTRIBUTES, generally called "fields" or "instance variables"
     // these live *inside each instance*
+    private final Tuner tuner = new Tuner();
     private String brand;
     private int volume;
     private DisplayType display = DisplayType.LED;
+
 
     // CONSTRUCTORS - special methods that get called when the client says "new"
     public Television() {
@@ -59,9 +62,22 @@ public class Television {
         System.out.println("Turning on your " + brand + " television to volume " + volume);
     }
 
+
     public void turnOff() {
         System.out.println("Shutting down...goodbye");
     }
+
+    public  void changeChannel(String channel){
+        tuner.setChannel(channel);
+
+
+    }
+
+    public String getCurrentChannel(){
+        return tuner.getChannel();
+
+    }
+
 
     // ACCESSOR METHODS - these provide "controlled access" to the (private) fields
     public String getBrand() {
@@ -116,11 +132,14 @@ public class Television {
         return true;
     }
 
+
     @Override
     public String toString() {
         return "com.entertainment.Television" +
                 ": brand=" + getBrand() +
                 ", volume=" + getVolume() +
-                ", display=" + getDisplay();
+                ", display=" + getDisplay()+
+                ", channel=" + getCurrentChannel();
+
     }
 }
