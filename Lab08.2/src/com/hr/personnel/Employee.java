@@ -59,6 +59,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: name=" + getName() + ", hireDate=" + getHireDate();
+//        return "Employee: name=" + getName() + ", hireDate=" + getHireDate();
+        return String.format("%s: name=%s, hireDate=%s", getClass().getSimpleName(), getName(), getHireDate());
     }
 }

@@ -40,7 +40,7 @@ public class HourlyEmployee extends Employee {
 
   @Override
   public String toString() {
-    return "Employee: name=" + getName() + ", hireDate=" + getHireDate() +" ,rate=" + getRate() + " ,hours=" + getHours();
+    return "Employee: name=" + getName() + ", hireDate=" + getHireDate() +", rate=" + getRate() + ", hours=" + getHours();
   }
 
   // TODO: 9/13/2022 override ctrl o for toString
