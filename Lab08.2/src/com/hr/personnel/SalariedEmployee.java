@@ -18,6 +18,10 @@ public class SalariedEmployee extends Employee {
     setSalary(salary);
   }
 
+  public void pay() {
+    System.out.printf("%s is paid a salary of %,.2f%n", getName(), salary);
+  }
+
   public double getSalary() {
     return salary;
   }
@@ -28,7 +32,8 @@ public class SalariedEmployee extends Employee {
 
   @Override
   public String toString() {
-    return "Employee: name=" + getName() + ", hireDate=" + getHireDate() +" ,salary" + getSalary();
+//    return "Employee: name=" + getName() + ", hireDate=" + getHireDate() +" ,salary" + getSalary();
+    return String.format("%s, salary=%,.2f", super.toString(), getSalary());// %, puts a comma as a digit separator for numbers > thousands
   }
 
 }

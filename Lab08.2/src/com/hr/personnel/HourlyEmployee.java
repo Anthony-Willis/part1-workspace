@@ -22,6 +22,10 @@ public class HourlyEmployee extends Employee {
     setHours(hours);
   }
 
+  public void pay() {
+    System.out.printf("%s is paid hourly, for a total of %,.2f%n", getName(), hours*rate);
+  }
+
   public double getRate() {
     return rate;
   }
@@ -40,8 +44,9 @@ public class HourlyEmployee extends Employee {
 
   @Override
   public String toString() {
-    return "Employee: name=" + getName() + ", hireDate=" + getHireDate() +", rate=" + getRate() + ", hours=" + getHours();
-  }
+//    return super.toString() + ",  rate=" + getRate() + ", hours=" + getHours();
+    return String.format("%s, rate=%.2f, hours=%1f", super.toString(), getRate(), getHours());
+  } //%.2f means 2 digits after the decimal, formatting a floating point value
 
   // TODO: 9/13/2022 override ctrl o for toString
 }
